@@ -1,8 +1,10 @@
-#Midterm Project
+## Midterm Project
+
 The contents of this repository include the f75 data which refers to data from randomized trial
 testing whether a modified milk formula improved child malnutrition outcomes.
 
-##code
+## code
+
 This repository contains a code folder which contains code for descriptive statistics,
 bivariate analysis, and linear regression. 
 
@@ -23,11 +25,13 @@ would be used to visualize the linear regression model with ggplot(df, aes(...)g
 a scatter plot. 
 'code/03_linear_regression.R'
 
-#output
+## output
+
 The output tables from descriptive statistics, bivariate analysis, and the scatter plot from linear regression
 will be saved in the outputs folder. 
 
-#report.rmd
+## report.rmd
+
 This will contain the descriptive table with the means and standard deviations of the outcomes.
 Tables with the means and standard deviations of outcomes based on treatment arm with p values will also be included.
 The adjusted linear regression scatter plot will also be included.
