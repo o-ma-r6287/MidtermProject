@@ -11,7 +11,7 @@ bivariate analysis, and exploratory analysis.
 descriptive statistics include a table with the mean and standard deviation of the outcome variables
 in the f75 data including, *weight1*, *weight2*, *muac1*, and *muac2*. By using the dplyr package and the
 gtsummary package, we will create a table1/summary table with the means and standard deviations in the outcome variables.
-'code/01_descriptive.R'
+'code/01_descriptives.R'
 
 bivariate analysis is where we compare outcomes between treatment arms and where we conduct independent t=tests
 and wilcoxon tests. We would use wilcox.test and t.test. Using gtsummary, we would make a table showing
@@ -30,6 +30,7 @@ The output tables from descriptive statistics, bivariate analysis, and the boxpl
 ## report.rmd
 
 Tables with the means and standard deviations of outcomes based on treatment arm with p values will also be included.
+<<<<<<< HEAD
 
 The exploratory analysis boxplots will also be included
 
@@ -43,6 +44,7 @@ After installing, restart your terminal and run:
 before running `make`.
 
 This prevents the “R_X11.so” / missing XQuartz error that can appear on macOS.
+
 
 
 
