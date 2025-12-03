@@ -18,11 +18,11 @@ here::i_am(
 ```{r creating figure, echo=FALSE}
 #| fig.align = "center",
 #| out.width = "600px"
-knitr::include_graphics(here::here("outputs/mauc_outcomes_by_arm.png"))
+knitr::include_graphics(here::here("outputs/muac_outcomes_by_arm.png"))
 ```
 
 ### Figure 2: Comparison of Weight Outcomes Between Modified and Standard F75.
-```{r creating figure, echo=FALSE}
+```{r creating figure2, echo=FALSE}
 #| fig.align = "center",
 #| out.width = "600px"
 knitr::include_graphics(here::here("outputs/weight_outcomes_by_arm.png"))
