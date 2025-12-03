@@ -30,7 +30,7 @@ The output tables from descriptive statistics, bivariate analysis, and the boxpl
 ## report.rmd
 
 Tables with the means and standard deviations of outcomes based on treatment arm with p values will also be included.
-<<<<<<< HEAD
+
 
 The exploratory analysis boxplots will also be included
 
