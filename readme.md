@@ -29,6 +29,11 @@ The output tables from descriptive statistics, bivariate analysis, and the boxpl
 
 ## report.rmd
 
+This will contain the descriptive table with the means and standard deviations of the outcomes.
+
+Tables with the means and standard deviations of outcomes based p values will also be included.
+The exploratory analysis boxplots will also be included.
+
 ### MacOS Setup Headsup
 If you are using a Mac, you might have to install XQuartz for some R packages to work correctly with renv.
 
@@ -41,7 +46,4 @@ before running `make`.
 This prevents the “R_X11.so” / missing XQuartz error that can appear on macOS.
 
 
-This will contain the descriptive table with the means and standard deviations of the outcomes.
 
-Tables with the means and standard deviations of outcomes based p values will also be included.
-The exploratory analysis boxplots will also be included.
