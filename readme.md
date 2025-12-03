@@ -6,7 +6,7 @@ testing whether a modified milk formula improved child malnutrition outcomes.
 ## code
 
 This repository contains a code folder which contains code for descriptive statistics,
-bivariate analysis, and linear regression. 
+bivariate analysis, and exploratory analysis. 
 
 descriptive statistics include a table with the mean and standard deviation of the outcome variables
 in the f75 data including, *weight1*, *weight2*, *muac1*, and *muac2*. By using the dplyr package and the
@@ -19,19 +19,16 @@ means and standard deviations of outcomes based on treatment arm and add a colum
 or wilcoxon test conducted.
 'code/02_bivariate_analysis.R'
 
-linear regression includes an adjusted linear regression model including confounders and testing for effect measure modification with interaction terms
-using the lm() function. The model summary could be seen with the summary() function. The ggplot2 package
-would be used to visualize the linear regression model with ggplot(df, aes(...)geom_point...) to ensure it is
-a scatter plot. 
-'code/03_linear_regression.R'
+exploratory analysis includes comparisons of MUAC and weight outcomes by treatment arm using boxplots created with the ggplot2 package. 
+these visualizations provide a clear, descriptive comparison of the two arms across time points.
+'code/03_boxplots.R'
 
 ## output
 
-The output tables from descriptive statistics, bivariate analysis, and the scatter plot from linear regression
-will be saved in the outputs folder. 
+The output tables from descriptive statistics, bivariate analysis, and the boxplot from exploratory analysis will be saved in the outputs folder. 
 
 ## report.rmd
 
 This will contain the descriptive table with the means and standard deviations of the outcomes.
 Tables with the means and standard deviations of outcomes based on treatment arm with p values will also be included.
-The adjusted linear regression scatter plot will also be included.
+The exploratory analysis boxplots will also be included.
