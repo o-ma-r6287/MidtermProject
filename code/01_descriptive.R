@@ -1,6 +1,6 @@
-# Code for bivariate analysis as outlined in midterm planning document will go here
+# Code for descriptive statistics as outlined in midterm planning document will go here
 
-here::i_am("code/02_bivariate_analysis.R")
+here::i_am("code/01_descriptive.R")
 
 library(tidyverse)
 library(here)
@@ -9,11 +9,10 @@ library(gtsummary)
 df <- read_csv(here("data", "f75_interim.csv")) %>%
   mutate(arm = factor(arm))
 
-gtsummary_bivariate <- df %>%
-  select(arm, weight1, weight2, muac1, muac2) %>%
+gtsummary_table <- df %>%
+  select(weight1, weight2, muac1, muac2) %>%
   tbl_summary(
-    by = arm,
     statistic = list(all_continuous() ~ "{mean} ({sd})"),
     digits = everything() ~ 2
-  ) %>%
-  add_p()
+  )
+

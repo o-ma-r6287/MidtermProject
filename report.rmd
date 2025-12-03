@@ -5,14 +5,61 @@ output: html_document
 ---
 
 ```{r, here-i-am, include = FALSE}
+library(here)
+library(tidyverse)
+library(gtsummary)
+library(gt)
+library(magrittr)
+
 here::i_am(
   "report.Rmd"
 )
 ```
 
+```{r build-tables, include=FALSE}
+library(tidyverse)
+library(gtsummary)
+library(gt)
+library(here)
+library(magrittr) 
+
+
+df <- readr::read_csv(here("data", "f75_interim.csv")) %>%
+  mutate(arm = factor(arm))
+
+#descriptive table
+gtsummary_table <- df %>%
+  select(weight1, weight2, muac1, muac2) %>%
+  tbl_summary(
+    statistic = all_continuous() ~ "{mean} ({sd})",
+    digits = everything() ~ 2
+  )
+
+#bivariate table 
+gtsummary_bivariate <- df %>%
+  select(arm, weight1, weight2, muac1, muac2) %>%
+  tbl_summary(
+    by = arm,
+    statistic = all_continuous() ~ "{mean} ({sd})"
+  ) %>%
+  add_p()
+```
+
 ### Table 1: 
+```{r table1, echo=FALSE}
+gtsummary_table %>%
+  as_gt()
+```
+**Table 1. Overall Summary of Measurements (N = 513).**
+
 
 ### Table 2: 
+```{r table2, echo=FALSE}
+gtsummary_bivariate %>%
+  as_gt()
+```
+**Table 2. Comparison of Measurements Between Treatment Arms.**
+
 
 ### Figure 1: Comparison of MUAC Outcomes Between Modified and Standard F75.
 ```{r creating figure, echo=FALSE}
@@ -20,6 +67,7 @@ here::i_am(
 #| out.width = "600px"
 knitr::include_graphics(here::here("outputs/muac_outcomes_by_arm.png"))
 ```
+**Figure 1. MUAC outcomes by treatment arm.**
 
 ### Figure 2: Comparison of Weight Outcomes Between Modified and Standard F75.
 ```{r creating figure2, echo=FALSE}
@@ -27,3 +75,4 @@ knitr::include_graphics(here::here("outputs/muac_outcomes_by_arm.png"))
 #| out.width = "600px"
 knitr::include_graphics(here::here("outputs/weight_outcomes_by_arm.png"))
 ```
+**Figure 2. Weight outcomes by treatment arm.**
