@@ -1,5 +1,5 @@
 ---
-title: 
+title: f75 Outcomes
 author: Najiyah Williamson, Julia Arwari, Mirra Chinta, Omar Abdul-Rahman 
 output: html_document
 ---
@@ -15,25 +15,23 @@ here::i_am(
 ### Table 2: 
 
 ### Figure 1: Comparison of MUAC Outcomes Between Modified and Standard F75.
-```{r creating figure, echo=FALSE}
+```{r creating_figure, echo=FALSE}
 #| fig.align = "center",
 #| out.width = "600px"
 knitr::include_graphics(here::here("outputs/muac_outcomes_by_arm.png"))
 ```
 
 ### Figure 2: Comparison of Weight Outcomes Between Modified and Standard F75.
-```{r creating figure2, echo=FALSE}
+```{r creating_figure2, echo=FALSE}
 #| fig.align = "center",
 #| out.width = "600px"
 knitr::include_graphics(here::here("outputs/weight_outcomes_by_arm.png"))
 ```
 
 ### Figure 3: Bivariate Analysis
-
-```{r creating-figure3, echo=FALSE}
-#| fig.align = "center"
+```{r creating_figure3, echo=FALSE}
+#| fig.align = "center",
 #| out.width = "600px"
-
 knitr::include_graphics(
   here::here("outputs", "bivariate_A_table.png")
 )
