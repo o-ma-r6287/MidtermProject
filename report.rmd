@@ -1,7 +1,11 @@
 ---
-title: 
-author: Najiyah Williamson, Julia Arwari, Mirra Chinta, Omar Abdul-Rahman 
-output: html_document
+title: "Midterm Project"
+author: "Najiyah Williamson, Julia Arwari, Mirra Chinta, Omar Abdul-Rahman"
+output:
+  html_document:
+    theme: yeti
+    highlight: espresso
+    df_print: paged
 ---
 
 ```{r, here-i-am, include = FALSE}
