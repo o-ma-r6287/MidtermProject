@@ -1,3 +1,4 @@
+
 library(tidyverse)
 library(gt)
 library(here)
@@ -81,3 +82,6 @@ gtsave(
   bivar_table,
   filename = here("outputs", "bivariate_A_table.png")
 )
+
+
+

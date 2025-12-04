@@ -1,17 +1,63 @@
 ---
+<<<<<<< HEAD:report.Rmd
 title: f75 Outcomes
 author: Najiyah Williamson, Julia Arwari, Mirra Chinta, Omar Abdul-Rahman 
 output: html_document
+=======
+title: "Midterm Project"
+author: "Najiyah Williamson, Julia Arwari, Mirra Chinta, Omar Abdul-Rahman"
+output:
+  html_document:
+    theme: yeti
+    highlight: espresso
+    df_print: paged
+>>>>>>> backup-omar:report.rmd
 ---
 
 ```{r, here-i-am, include = FALSE}
+library(here)
+library(tidyverse)
+library(gtsummary)
+library(gt)
+library(magrittr)
+
 here::i_am(
   "report.Rmd"
 )
 ```
 
+```{r build-tables, include=FALSE}
+library(tidyverse)
+library(gtsummary)
+library(gt)
+library(here)
+library(magrittr) 
+
+
+df <- readr::read_csv(here("data", "f75_interim.csv")) %>%
+  mutate(arm = factor(arm))
+
+#descriptive table
+gtsummary_table <- df %>%
+  select(weight1, weight2, muac1, muac2) %>%
+  tbl_summary(
+    statistic = all_continuous() ~ "{mean} ({sd})",
+    digits = everything() ~ 2
+  )
+
+#bivariate table 
+gtsummary_bivariate <- df %>%
+  select(arm, weight1, weight2, muac1, muac2) %>%
+  tbl_summary(
+    by = arm,
+    statistic = all_continuous() ~ "{mean} ({sd})"
+  ) %>%
+  add_p()
+```
+
 ### Table 1: 
 ```{r table1, echo=FALSE}
+<<<<<<< HEAD:report.Rmd
 #| fig.align = "center",
 #| out.width = "200px"
 knitr::include_graphics(
@@ -19,6 +65,21 @@ knitr::include_graphics(
 )
 ```
 **Table 1. Overall Summary of Measurements (N = 513).**
+=======
+gtsummary_table %>%
+  as_gt()
+```
+**Table 1. Overall Summary of Measurements (N = 513).**
+
+
+### Table 2: 
+```{r table2, echo=FALSE}
+gtsummary_bivariate %>%
+  as_gt()
+```
+**Table 2. Comparison of Measurements Between Treatment Arms.**
+
+>>>>>>> backup-omar:report.rmd
 
 ### Figure 1: Comparison of MUAC Outcomes Between Modified and Standard F75.
 ```{r creating_figure, echo=FALSE}
@@ -26,6 +87,7 @@ knitr::include_graphics(
 #| out.width = "600px"
 knitr::include_graphics(here::here("outputs/muac_outcomes_by_arm.png"))
 ```
+**Figure 1. MUAC outcomes by treatment arm.**
 
 ### Figure 2: Comparison of Weight Outcomes Between Modified and Standard F75.
 ```{r creating_figure2, echo=FALSE}
@@ -33,6 +95,7 @@ knitr::include_graphics(here::here("outputs/muac_outcomes_by_arm.png"))
 #| out.width = "600px"
 knitr::include_graphics(here::here("outputs/weight_outcomes_by_arm.png"))
 ```
+<<<<<<< HEAD:report.Rmd
 
 ### Table 2: Bivariate Analysis
 ```{r creating_figure3, echo=FALSE}
@@ -43,3 +106,6 @@ knitr::include_graphics(
 )
 ```
 **Table 2. Comparison of Measurements Between Treatment Arms.**
+=======
+**Figure 2. Weight outcomes by treatment arm.**
+>>>>>>> backup-omar:report.rmd
