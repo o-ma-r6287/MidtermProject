@@ -20,7 +20,6 @@ knitr::include_graphics(
 ```
 **Table 1. Overall Summary of Measurements (N = 513).**
 
-
 ### Figure 1: Comparison of MUAC Outcomes Between Modified and Standard F75.
 ```{r creating_figure, echo=FALSE}
 #| fig.align = "center",
