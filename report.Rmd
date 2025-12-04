@@ -21,14 +21,6 @@ knitr::include_graphics(
 **Table 1. Overall Summary of Measurements (N = 513).**
 
 
-### Table 2: 
-```{r table2, echo=FALSE}
-#gtsummary_bivariate %>%
-  #as_gt()
-```
-**Table 2. Comparison of Measurements Between Treatment Arms.**
-
-
 ### Figure 1: Comparison of MUAC Outcomes Between Modified and Standard F75.
 ```{r creating_figure, echo=FALSE}
 #| fig.align = "center",
@@ -51,4 +43,4 @@ knitr::include_graphics(
   here::here("outputs", "bivariate_A_table.png")
 )
 ```
-
+**Table 2. Comparison of Measurements Between Treatment Arms.**
