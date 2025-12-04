@@ -34,7 +34,7 @@ knitr::include_graphics(here::here("outputs/muac_outcomes_by_arm.png"))
 knitr::include_graphics(here::here("outputs/weight_outcomes_by_arm.png"))
 ```
 
-### Figure 3: Bivariate Analysis
+### Table 2: Bivariate Analysis
 ```{r creating_figure3, echo=FALSE}
 #| fig.align = "center",
 #| out.width = "600px"
